@@ -42,7 +42,7 @@ Additionally, in the ```Program.cs``` file, you can modify the bot's parameters 
 
 ## Changing email trigger
 
-The following parameters are hard-coded. To change the email trigger conditions, go to ```CheckCoinIncreaseBot.cs``` in the ```SendEmail``` function:
+The following parameters are hard-coded, so you can customize how you want. To change the email trigger conditions, go to ```CheckCoinIncreaseBot.cs``` in the ```SendEmail``` function:
 
 ```C#
  bool worthSending = results.Any(x =>
