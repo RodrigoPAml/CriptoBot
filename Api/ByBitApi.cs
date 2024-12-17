@@ -39,19 +39,19 @@ namespace CriptoBOT.Api
         /// <returns></returns>
         public async Task<GetTickersResponse> GetTickers(string symbol = "")
         {
-            string url = $"{_baseAddress}/v5/market/tickers";
+            var url = $"{_baseAddress}/v5/market/tickers";
 
-            string queryString = $"api_key={_apiKey}&category=spot&symbol={symbol}";
-            string signature = Functions.GenerateSignature(queryString, _secretKey);
-            string fullUrl = $"{url}?{queryString}&sign={signature}";
+            var queryString = $"api_key={_apiKey}&category=spot&symbol={symbol}";
+            var signature = Functions.GenerateSignature(queryString, _secretKey);
+            var fullUrl = $"{url}?{queryString}&sign={signature}";
 
             using (HttpClient client = new HttpClient())
             {
-                string jsonResponse = string.Empty;
+                var jsonResponse = string.Empty;
 
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync(fullUrl);
+                    var response = await client.GetAsync(fullUrl);
                     jsonResponse = await response.Content.ReadAsStringAsync();
 
                     return JsonConvert.DeserializeObject<GetTickersResponse>(jsonResponse);
@@ -80,12 +80,12 @@ namespace CriptoBOT.Api
         /// <returns></returns>
         public async Task<GetKLineResponse> GetKLine(string symbol, string interval, int limit, DateTimeOffset start, DateTimeOffset end)
         {
-            string url = $"{_baseAddress}/v5/market/kline";
-            long endTime = end.ToUnixTimeMilliseconds();
-            long startTime = start.ToUnixTimeMilliseconds();
-            string queryString = $"api_key={_apiKey}&category=spot&symbol={symbol}&interval={interval}&limite={limit}&start={startTime}&end={endTime}";
-            string signature = Functions.GenerateSignature(queryString, _secretKey);
-            string fullUrl = $"{url}?{queryString}&sign={signature}";
+            var url = $"{_baseAddress}/v5/market/kline";
+            var endTime = end.ToUnixTimeMilliseconds();
+            var startTime = start.ToUnixTimeMilliseconds();
+            var queryString = $"api_key={_apiKey}&category=spot&symbol={symbol}&interval={interval}&limite={limit}&start={startTime}&end={endTime}";
+            var signature = Functions.GenerateSignature(queryString, _secretKey);
+            var fullUrl = $"{url}?{queryString}&sign={signature}";
 
             using (HttpClient client = new HttpClient())
             {
@@ -93,7 +93,7 @@ namespace CriptoBOT.Api
 
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync(fullUrl);
+                    var response = await client.GetAsync(fullUrl);
                     jsonResponse = await response.Content.ReadAsStringAsync();
 
                     return JsonConvert.DeserializeObject<GetKLineResponse>(jsonResponse);
