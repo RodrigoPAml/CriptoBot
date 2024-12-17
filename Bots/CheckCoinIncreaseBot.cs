@@ -6,7 +6,7 @@ using CriptoBOT.Utils;
 namespace CriptoBOT.Bots
 {
     /// <summary>
-    /// This bot list for top 10 coins that have an increase in value in the last 24 hours greater than <see cref="_price24HIncrease"/> or
+    /// This bot lists the top 10 coins that have an increase in value in the last 24 hours greater than <see cref="_price24HIncrease"/> or
     /// an increase greater than <see cref="_priceIncrease"/> since the start of the bot 
     /// This bot also send email every 1 minute to inform the changes
     /// </summary>
