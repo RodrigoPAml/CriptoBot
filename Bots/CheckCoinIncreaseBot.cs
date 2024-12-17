@@ -74,7 +74,7 @@ namespace CriptoBOT.Bots
                     initialCoin = currentCoin;
                 }
 
-                decimal priceDifferencePercentage = ((currentCoin.LastPrice - initialCoin.LastPrice) / initialCoin.LastPrice) * 100;
+                var priceDifferencePercentage = ((currentCoin.LastPrice - initialCoin.LastPrice) / initialCoin.LastPrice) * 100;
                 var priceDiff = Functions.FormatPercentage(priceDifferencePercentage);
                 var elapsedMin = Functions.FormatMinute((DateTime.Now - _initialTime).TotalMinutes);
 
