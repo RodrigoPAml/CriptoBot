@@ -35,7 +35,7 @@ namespace CriptoBOT.Api
         /// Tickers API
         /// For more info check https://bybit-exchange.github.io/docs/v5/market/tickers
         /// </summary>
-        /// <param name="symbol">The cripto coin symbol, if empty get every coin</param>
+        /// <param name="symbol">The criyto coin symbol, if empty get every coin</param>
         /// <returns></returns>
         public async Task<GetTickersResponse> GetTickers(string symbol = "")
         {
@@ -72,7 +72,7 @@ namespace CriptoBOT.Api
         /// KLine data API
         /// For more info check https://bybit-exchange.github.io/docs/v5/market/kline
         /// </summary>
-        /// <param name="symbol">The cripto coin identifier</param>
+        /// <param name="symbol">The crypto coin identifier</param>
         /// <param name="interval">Kline interval. 1,3,5,15,30,60,120,240,360,720,D,M,W</param>
         /// <param name="limit">The start timestamp (ms)</param>
         /// <param name="start">The end timestamp (ms)</param>
