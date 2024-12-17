@@ -26,6 +26,7 @@ namespace CriptoBOT.Api
                 _baseAddress = "https://api.bybit.com";
             else
                 _baseAddress = "https://api-testnet.bybit.com";
+
             _apiKey = apiKey;
             _secretKey = secretKey;
         }
