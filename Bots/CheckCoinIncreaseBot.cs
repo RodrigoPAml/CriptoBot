@@ -85,7 +85,7 @@ namespace CriptoBOT.Bots
 
                 output.Add(new() { Message = $"{currentCoin.Symbol} {Functions.MakeSpace(15 - currentCoin.Symbol.Count())}", Color = ConsoleColor.White });
 
-                output.Add(new() { Message = $"beg ({elapsedMin} ago): ", Color = ConsoleColor.White });
+                output.Add(new() { Message = $"acc ({elapsedMin} ago): ", Color = ConsoleColor.White });
                 output.Add(new() { Message = $"{priceDiff} {Functions.MakeSpace(15 - priceDiff.Count())}", Color = Functions.GetColorForPercentage(priceDiff) });
 
                 var resp5 = await _api.GetKLine(currentCoin.Symbol, "5", 1, DateTimeOffset.UtcNow.AddMinutes(-5), DateTimeOffset.UtcNow);
@@ -143,7 +143,7 @@ namespace CriptoBOT.Bots
             bool worthSending = results.Any(x =>
                 x.PctBeg > 10.0m ||
                 x.Pct5M > 15.0m ||
-                x.Pct30M > 20.0m
+                x.Pct30M > 40.0m
             );
 
             if ((DateTime.Now - _initialTimeEmail).TotalMinutes > 1 && worthSending)
