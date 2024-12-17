@@ -14,8 +14,7 @@ namespace CriptoBOT
 
             bool production = true;
             var emailsToSend = new List<string>() {
-                "rodrigodotaserio@gmail.com",
-                "gcsantos@inf.ufsm.br"
+                "your_email@domain.com",
             };
 
             var percentage24h = 25.0m; // Show coins that have increased their value in 25% in the last 24 hours
