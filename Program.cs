@@ -14,11 +14,11 @@ namespace CriptoBOT
 
             bool production = true;
             var emailsToSend = new List<string>() {
-                "your_email@domain.com",
+                 "your_email@domain.com",
             };
 
-            var percentage24h = 25.0m; // Show coins that have increased their value in 25% in the last 24 hours
-            var percentageIncrease = 1.0m; // Show coins that have increased their value in 1% since the program started
+            var percentage24h = 25.0m; // Shows coins that have increased their value in 25% in the last 24 hours
+            var percentageIncrease = 1.0m; // Shows coins that have increased their value in 1% since the program started
 
             CheckCoinIncreaseBot bot = new CheckCoinIncreaseBot(
                 (string)jsonObject["apiKey"], 

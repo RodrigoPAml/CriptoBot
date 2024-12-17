@@ -1,7 +1,7 @@
 ﻿namespace CriptoBOT.Entities
 {
     /// <summary>
-    /// Represents the increase of value in a cripto coin by intervals
+    /// Represents the increase of value in a crypto coin by intervals
     /// </summary>
     public class CoinResult
     {

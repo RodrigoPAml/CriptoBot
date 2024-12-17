@@ -26,8 +26,8 @@ namespace CriptoBOT.Bots
         /// <param name="apiKey"></param>
         /// <param name="apiSecret"></param>
         /// <param name="production">Production environemnt or not</param>
-        /// <param name="priceIncrease24H">Show coins with 24h increase percentage (%)</param>
-        /// <param name="priceIncrease">Show coins with current increase percentage (%) since program start</param>
+        /// <param name="priceIncrease24H">Shows coins that have increased their value in 25% in the last 24 hours</param>
+        /// <param name="priceIncrease">Shows coins that have increased their value in 1% since the program started</param>
         /// <param name="recipients">Emails to warn about coin changes</param>
         public CheckCoinIncreaseBot(string apiKey, string apiSecret, bool production, decimal priceIncrease24H, decimal priceIncrease, List<string> recipients)
         {
