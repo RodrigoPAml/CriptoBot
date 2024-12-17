@@ -48,6 +48,6 @@ The following parameters are hard-coded. To change the email trigger conditions,
  bool worthSending = results.Any(x =>
      x.PctBeg > 10.0m ||
      x.Pct5M > 15.0m ||
-     x.Pct30M > 20.0m
+     x.Pct30M > 40.0m
  );
 ```
