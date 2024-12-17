@@ -1,0 +1,8 @@
+{
+  "apiKey": "",
+  "apiSecret": "",
+  "email": "",
+  "emailSecret": "",
+  "smtp": "smtp.gmail.com",
+  "smptPort": 587
+}
