@@ -50,4 +50,6 @@ The following parameters are hard-coded. To change the email trigger conditions,
      x.Pct5M > 15.0m ||
      x.Pct30M > 40.0m
  );
+
+ if ((DateTime.Now - _initialTimeEmail).TotalMinutes > 1 && worthSending)...
 ```
