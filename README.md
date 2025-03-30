@@ -2,7 +2,7 @@
 
 A C# cryptocurrency console bot that consumes the ```ByBit``` API and shows the top crypto coins with positive changes, sending email notifications when there’s a significant change. 
 
-```This is for study purposes only. Do not use it, or you may lose money.```
+```This is for study purposes only. Do not use it to invest or you may lose money.```
 
 Check the API docs at [ByBit API Documentation](https://bybit-exchange.github.io/docs/v5/intro).
 
